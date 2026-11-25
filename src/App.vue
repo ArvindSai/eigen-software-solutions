@@ -3,6 +3,7 @@ import SiteHeader from './components/SiteHeader.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import HeroSection from './components/HeroSection.vue'
 import CapabilitiesSection from './components/CapabilitiesSection.vue'
+import SystemsSection from './components/SystemsSection.vue'
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import CapabilitiesSection from './components/CapabilitiesSection.vue'
     <main class="content-shell">
       <section id="hero" aria-label="Hero"><HeroSection /></section>
       <section id="capabilities" aria-label="Capabilities"><CapabilitiesSection /></section>
-      <section id="systems" aria-label="Systems"><!-- Build 4: SystemsSection (interactive agent-run demo) --></section>
+      <section id="systems" aria-label="Systems"><SystemsSection /></section>
       <section id="proof" aria-label="Proof"><!-- Build 5: ProofSection (case studies) --></section>
       <section id="model" aria-label="Model"><!-- Build 6: ModelSection (solo principal vs agency) --></section>
       <section id="writing" aria-label="Writing"><!-- Build 7: WritingSection (engineering notes) --></section>
