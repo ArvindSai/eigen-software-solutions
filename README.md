@@ -25,6 +25,6 @@ npm run build
 ## Deploy
 
 Push to `main` — `.github/workflows/deploy.yml` builds and deploys to
-GitHub Pages. Repo name / GitHub account still to be confirmed; the
+GitHub Pages. Repo is ArvindSai/eigen-software-solutions; the
 Vite `base` is `./` so asset paths work on a project Pages site
 regardless of repo name.
