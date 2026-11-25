@@ -27,7 +27,7 @@ import StartSection from './components/StartSection.vue'
       <section id="proof" aria-label="Proof"><ProofSection /></section>
       <section id="model" aria-label="Model"><ModelSection /></section>
       <section id="writing" aria-label="Writing"><WritingSection /></section>
-      <section id="start" aria-label="Start"><!-- Build 8: StartSection (scoping form / contact) --></section>
+      <section id="start" aria-label="Start"><StartSection /></section>
     </main>
     <SiteFooter />
   </div>
