@@ -1,6 +1,7 @@
 <script setup>
 import SiteHeader from './components/SiteHeader.vue'
 import SiteFooter from './components/SiteFooter.vue'
+import HeroSection from './components/HeroSection.vue'
 </script>
 
 <template>
@@ -14,7 +15,7 @@ import SiteFooter from './components/SiteFooter.vue'
       Testimonials / writing notes also live inside this shell.
     -->
     <main class="content-shell">
-      <section id="hero" aria-label="Hero"><!-- Build 2: HeroSection --></section>
+      <section id="hero" aria-label="Hero"><HeroSection /></section>
       <section id="capabilities" aria-label="Capabilities"><!-- Build 3: CapabilitiesSection --></section>
       <section id="systems" aria-label="Systems"><!-- Build 4: SystemsSection (interactive agent-run demo) --></section>
       <section id="proof" aria-label="Proof"><!-- Build 5: ProofSection (case studies) --></section>
