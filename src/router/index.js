@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import WritingView from '../views/WritingView.vue'
 
 const router = createRouter({
   // BASE_URL is '/eigen-software-solutions/' (vite.config.js) — the GitHub
@@ -9,7 +10,8 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: HomeView },
-    // /writing lands in its own task; /about in the task after that.
+    { path: '/writing', name: 'writing', component: WritingView },
+    // /about lands in its own task.
     // Unknown paths go home rather than rendering a blank page.
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
