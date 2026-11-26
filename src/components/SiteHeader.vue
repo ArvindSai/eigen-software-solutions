@@ -1,18 +1,18 @@
 <template>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Eigen Software Solutions — home">
+      <router-link to="/" class="brand" aria-label="Eigen Software Solutions — home">
         <span class="brand-mark" aria-hidden="true">λ</span>
         <span class="brand-name">Eigen</span>
         <span class="brand-suffix">Software Solutions</span>
-      </a>
+      </router-link>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#capabilities">Capabilities</a>
-        <a href="#systems">Systems</a>
-        <a href="#proof">Proof</a>
-        <a href="#model">Model</a>
-        <a href="#writing">Writing</a>
-        <a href="#start" class="nav-cta">Start a project</a>
+        <router-link to="/#capabilities">Capabilities</router-link>
+        <router-link to="/#systems">Systems</router-link>
+        <router-link to="/#proof">Proof</router-link>
+        <router-link to="/#model">Model</router-link>
+        <router-link to="/#writing">Writing</router-link>
+        <router-link to="/#start" class="nav-cta">Start a project</router-link>
       </nav>
     </div>
   </header>

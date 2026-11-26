@@ -1,11 +1,11 @@
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
-// base './' keeps asset paths working on GitHub Pages project sites
-// regardless of the repo name, which is still to be confirmed.
-// Switch to '/<repo>/' if a root-absolute base is preferred later.
+// base '/eigen-software-solutions/' is the GitHub Pages project path.
+// vue-router history mode needs this absolute base (import.meta.env.BASE_URL);
+// the previous './' base cannot serve as a router base. If a custom domain
+// is ever added, switch base to '/' and the router base follows.
 export default defineConfig({
-  base: './',
+  base: '/eigen-software-solutions/',
   plugins: [vue()],
 })
