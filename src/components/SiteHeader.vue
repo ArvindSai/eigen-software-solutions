@@ -12,6 +12,7 @@
         <router-link to="/#proof">Proof</router-link>
         <router-link to="/#model">Model</router-link>
         <router-link to="/writing">Writing</router-link>
+        <router-link to="/about">About</router-link>
         <router-link to="/#start" class="nav-cta">Start a project</router-link>
       </nav>
     </div>
