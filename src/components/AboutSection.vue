@@ -12,7 +12,7 @@ import { RouterLink } from 'vue-router'
     <div class="container">
       <p class="section-label">About</p>
 
-      <h2 class="about-title">One principal. The work, owned end to end.</h2>
+      <h1 class="about-title">One principal. The work, owned end to end.</h1>
 
       <p class="about-intro">
         Eigen Software Solutions is Arvind, a solo principal engineer. I
