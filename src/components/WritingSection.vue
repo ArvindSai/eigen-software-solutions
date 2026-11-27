@@ -39,7 +39,7 @@ const NOTES = [
     <div class="container">
       <p class="section-label">05 // Writing</p>
 
-      <h2 class="writing-title">Engineering notes &amp; product walkthroughs.</h2>
+      <h1 class="writing-title">Engineering notes &amp; product walkthroughs.</h1>
 
       <p class="writing-intro">
         How production AI systems are actually built — the decisions,
