@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import WritingView from '../views/WritingView.vue'
 import AboutView from '../views/AboutView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 const router = createRouter({
   // BASE_URL is '/eigen-software-solutions/' (vite.config.js) — the GitHub
@@ -13,8 +14,8 @@ const router = createRouter({
     { path: '/', name: 'home', component: HomeView },
     { path: '/writing', name: 'writing', component: WritingView },
     { path: '/about', name: 'about', component: AboutView },
-    // Unknown paths go home rather than rendering a blank page.
-    { path: '/:pathMatch(.*)*', redirect: '/' },
+    // Unknown paths render a 404 page instead of silently landing on home.
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFoundView },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
