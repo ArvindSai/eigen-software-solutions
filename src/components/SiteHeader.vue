@@ -130,7 +130,6 @@ function toggleMenu() {
 .menu-button.open span:nth-child(2) { opacity: 0; }
 .menu-button.open span:nth-child(3) { transform: translateY(-7px) rotate(45deg); }
 
-.mobile-nav { display: none; }
 .mobile-nav a {
   display: block;
   padding: 12px 0;
