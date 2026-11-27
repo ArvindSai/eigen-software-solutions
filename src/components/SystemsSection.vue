@@ -142,7 +142,7 @@ onUnmounted(clearTimers)
             <span class="demo-dot" aria-hidden="true"></span>
             agent-run — simulated trace
           </p>
-          <p class="demo-status">
+          <p class="demo-status" aria-live="polite">
             <template v-if="running">running…</template>
             <template v-else-if="finished">complete · {{ visibleSteps.length }} steps · {{ runTime }}s</template>
             <template v-else>idle</template>
@@ -165,7 +165,7 @@ onUnmounted(clearTimers)
           </button>
         </div>
 
-        <div class="trace" aria-live="polite">
+        <div class="trace">
           <p v-if="visibleSteps.length === 0" class="trace-empty">
             Select a workflow, then press run. Nothing here calls a live
             system — every line is simulated locally.
