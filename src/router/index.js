@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import WritingView from '../views/WritingView.vue'
+import NoteView from '../views/NoteView.vue'
 import AboutView from '../views/AboutView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
 
@@ -13,6 +14,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'home', component: HomeView },
     { path: '/writing', name: 'writing', component: WritingView },
+    { path: '/writing/:slug', name: 'note', component: NoteView },
     { path: '/about', name: 'about', component: AboutView },
     // Unknown paths render a 404 page instead of silently landing on home.
     { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFoundView },
