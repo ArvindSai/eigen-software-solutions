@@ -5,12 +5,13 @@ import SiteFooter from './components/SiteFooter.vue'
 
 <template>
   <div id="top" class="app-shell">
+    <a href="#main" class="skip-link">Skip to content</a>
     <SiteHeader />
     <!--
       Router setup: pages render here. '/' is HomeView (all landing-page
       sections); /writing and /about land in their own tasks.
     -->
-    <main class="content-shell">
+    <main id="main" class="content-shell">
       <router-view />
     </main>
     <SiteFooter />

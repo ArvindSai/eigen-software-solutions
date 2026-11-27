@@ -399,7 +399,7 @@ function startOver() {
 .field-error {
   margin: 6px 0 0;
   font-size: 13px;
-  color: #f87171;
+  color: var(--danger);
 }
 
 .form-actions {
