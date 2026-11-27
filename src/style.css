@@ -67,8 +67,9 @@ a:hover { color: var(--accent); }
   padding: 0 24px;
 }
 
-/* Section shell — every future section (Hero, Capabilities, Systems,
-   Proof, Model, Writing, Start) lives inside this same container. */
+/* Anchor targets sit below the 64px sticky header. */
+section[id] { scroll-margin-top: 84px; }
+
 .section { padding: var(--space-section) 0; }
 .section-label {
   font-family: var(--font-mono);
