@@ -31,8 +31,8 @@ function toggleMenu() {
         <router-link to="/#systems">Systems</router-link>
         <router-link to="/#proof">Proof</router-link>
         <router-link to="/#model">Model</router-link>
-        <router-link to="/writing">Writing</router-link>
-        <router-link to="/about">About</router-link>
+        <router-link to="/writing" exact-active-class="nav-active">Writing</router-link>
+        <router-link to="/about" exact-active-class="nav-active">About</router-link>
         <router-link to="/#start" class="nav-cta">Start a project</router-link>
       </nav>
       <button
@@ -60,8 +60,8 @@ function toggleMenu() {
       <router-link to="/#systems" @click="menuOpen = false">Systems</router-link>
       <router-link to="/#proof" @click="menuOpen = false">Proof</router-link>
       <router-link to="/#model" @click="menuOpen = false">Model</router-link>
-      <router-link to="/writing" @click="menuOpen = false">Writing</router-link>
-      <router-link to="/about" @click="menuOpen = false">About</router-link>
+      <router-link to="/writing" exact-active-class="nav-active" @click="menuOpen = false">Writing</router-link>
+      <router-link to="/about" exact-active-class="nav-active" @click="menuOpen = false">About</router-link>
       <router-link to="/#start" class="mobile-cta" @click="menuOpen = false">Start a project</router-link>
     </nav>
   </header>
@@ -95,6 +95,7 @@ function toggleMenu() {
 .site-nav { display: flex; align-items: center; gap: 24px; font-size: 14px; }
 .site-nav a { color: var(--muted); }
 .site-nav a:hover { color: var(--text); }
+.site-nav a.nav-active { color: var(--accent); font-weight: 600; }
 .nav-cta {
   color: var(--bg) !important;
   background: var(--accent);
@@ -138,6 +139,7 @@ function toggleMenu() {
   border-bottom: 1px solid var(--border);
 }
 .mobile-nav a:last-child { border-bottom: 0; }
+.mobile-nav a.nav-active { color: var(--accent); font-weight: 600; }
 .mobile-cta { color: var(--accent) !important; font-weight: 600; }
 
 @media (max-width: 760px) {
