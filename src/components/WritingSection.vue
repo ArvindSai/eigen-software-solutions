@@ -1,37 +1,11 @@
 <script setup>
 // Writing section — engineering notes & product walkthroughs (Build 7).
-// All copy below is verbatim from the preview's Writing section
-// (label, heading, intro, and each note's date, read time, type,
-// title and description).
+// Notes live in src/data/notes.js, shared with the single-note pages.
+// All copy is verbatim from the preview's Writing section (label, heading,
+// intro, and each note's date, read time, type, title and description).
 // No images or other assets appear in the preview's Writing section,
 // so the section is text-only by design.
-
-const NOTES = [
-  {
-    date: 'Nov 10, 2026',
-    minutes: 6,
-    type: 'Engineering note',
-    title: 'Tool-calling contracts: treating agent tools like public APIs',
-    description:
-      'Why every tool an agent can call deserves a typed schema, an idempotency key and a dry-run mode — and how that turns flaky demos into systems you can operate.',
-  },
-  {
-    date: 'Oct 22, 2026',
-    minutes: 5,
-    type: 'Engineering note',
-    title: 'Write the evals before you tune retrieval',
-    description:
-      'A practical loop for knowledge engines: a golden question set, retrieval and answer metrics tracked separately, and regressions caught before they reach users.',
-  },
-  {
-    date: 'Sep 30, 2026',
-    minutes: 7,
-    type: 'Product walkthrough',
-    title: 'Walkthrough: an inbox triage agent, from scoping to production',
-    description:
-      'How a support-inbox agent is scoped, built and rolled out in stages — shadow mode, human approval, then autonomy on the categories that earned it.',
-  },
-]
+import { NOTES } from '../data/notes.js'
 </script>
 
 <template>
@@ -47,16 +21,23 @@ const NOTES = [
       </p>
 
       <div class="notes-grid">
-        <article v-for="note in NOTES" :key="note.title" class="note-card">
-          <p class="note-meta">
-            <span>{{ note.date }}</span>
-            <span aria-hidden="true">·</span>
-            <span>{{ note.minutes }} min</span>
-            <span class="note-type">{{ note.type }}</span>
-          </p>
-          <h3 class="note-title">{{ note.title }}</h3>
-          <p class="note-description">{{ note.description }}</p>
-        </article>
+        <router-link
+          v-for="note in NOTES"
+          :key="note.slug"
+          :to="`/writing/${note.slug}`"
+          class="note-link"
+        >
+          <article class="note-card">
+            <p class="note-meta">
+              <span>{{ note.date }}</span>
+              <span aria-hidden="true">·</span>
+              <span>{{ note.minutes }} min</span>
+              <span class="note-type">{{ note.type }}</span>
+            </p>
+            <h3 class="note-title">{{ note.title }}</h3>
+            <p class="note-description">{{ note.description }}</p>
+          </article>
+        </router-link>
       </div>
     </div>
   </div>
@@ -89,6 +70,9 @@ const NOTES = [
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
+.note-link { display: block; }
+.note-link:hover .note-card { border-color: var(--accent); }
 
 .note-card {
   border: 1px solid var(--border);
